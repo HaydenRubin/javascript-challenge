@@ -37,7 +37,14 @@ function exactDate() {
   d3.event.preventDefault();
   
   var dateTime = d3.select("#datetime");
+  var city = d3.select("#city");
+  var state = d3.select("#state");
+  var country = d3.select("#country");
+  var shape = d3.select("#shape");
   var inputValue = dateTime.property("value");
+  var thiss = d3.select(this).select("input").property("value");
+
+  console.log(thiss);
 
   var filteredData = tableData.filter(object => object.datetime === inputValue);
 
@@ -57,3 +64,18 @@ function exactDate() {
 };
 
 button.on("click", exactDate);
+
+
+// Using multiple input tags and/or select dropdowns, 
+// write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
+//date/time
+//city
+
+
+
+//state
+//country
+//shape
+
+
+
